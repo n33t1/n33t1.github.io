@@ -26,4 +26,6 @@ github_username:  n33t1
 
 # Build settings
 markdown: kramdown
-theme: minima
+theme: minim
+
+permalink: /blog/:year/:month/:day/:titlea
