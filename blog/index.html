@@ -1,12 +1,132 @@
 ---
-layout: default
-title: Hank Quinlan's Blog
+layout: page
+title: Blog
+permalink: /blog/
 ---
-<h1>{{ page.title }}</h1>
-<ul class="posts">
 
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-  {% endfor %}
+
+<head>
+<style>
     
+    .hidden {
+  display: none!important;
+  visibility: hidden!important;
+}
+    </style>
+
+</head>
+
+<body>
+
+{% capture site_tags %}
+{% for tag in site.tags %}
+{{ tag | first }}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+{% endcapture %}
+<ul>
+  {% assign sorted_tags = site.tags | sort %}
+  {% for tag in sorted_tags %}
+    {% assign t = tag | first %}
+    {% assign posts = tag | last %}
+    <li class="tag-index" id="{{ t }}-item">
+      <a href="#{{ t }}" onclick="filter('{{ t }}'); return false;">
+          <span>{{ t }}</span>
+        <span class="count">{{ site.tags[t].size }}</span>
+          </a>
+    </li>
+  {% endfor %}
 </ul>
+
+<div class="archive">
+{% for tag in site.tags %}
+  {% assign t = tag | first %}
+  {% assign posts = tag | last %}
+  <div class="archive-list hidden" id="{{ t }}-container">
+      {% for post in posts %}
+        <div class="archive-list-post">
+        {% if post.tags contains t %}
+        <a href="{{ post.url }}"> <span class="archive-list-post-title">
+          {{ post.title }}
+        </span>
+        <span class="archive-list-post-date">
+          <time>| {{ post.date | date_to_string }}</time>
+        </span></a>
+        {% endif %}
+        </div>
+      {% endfor %}
+
+  </div>
+{% endfor %}
+    </div>
+
+
+<div class="archive">
+  <div class="archive-list">
+  {% if site.posts.size == 0 %}
+    <h2>No post found</h2>
+  {% else %}
+  {% for post in site.posts %}
+    <div class="archive-list-post">
+      {% if post.link %}
+      <a href="{{ post.link }}">
+      {% else %}
+      <a href="{{ post.url | prepend: site.baseurl }}">
+      {% endif %}  
+        <span class="archive-list-post-title">
+          {{ post.title }}
+        </span>
+        <span class="archive-list-post-date">
+          <time>| {{ post.date | date_to_string }}</time>
+        </span>
+      </a>
+    </div>
+  {% endfor %}
+  {% endif %}
+  </div>
+</div>
+    
+    
+    
+
+</body>
+
+<script>
+    
+if(window.location.hash) {
+  var tag = window.location.hash.split('#')[1];
+  filter(tag);
+}
+    
+function filter(tag) {
+  setActiveTag(tag);
+  showContainer(tag);
+}
+
+function setActiveTag(tag) {
+  // loop through all items and remove active class
+  var items = document.getElementsByClassName('tag-index');
+  for(var i=0; i < items.length; i++) {
+    items[i].setAttribute('class', 'tag-index');
+  }
+
+  // set the selected tag's item to active
+  var item = document.getElementById(tag + '-item');
+  if(item) {
+    item.setAttribute('class', 'tag-index active');
+  }
+}
+
+function showContainer(tag) {
+  // loop through all lists and hide them
+  var lists = document.getElementsByClassName('archive-list');
+  for(var i=0; i < lists.length; i++) {
+    lists[i].setAttribute('class', 'archive-list hidden');
+  }
+
+  // remove the hidden class from the list corresponding to the selected tag
+  var list = document.getElementById(tag + '-container');
+  if(list) {
+    list.setAttribute('class', 'archive-list');
+  }
+}
+</script>

@@ -1,9 +1,56 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<header>
+  <hr class="under">
+  <h1 class="header-small">
+      <a href="{{ site.url }}"><span class="active">{{ site.name }}</span></a>
+       {% for nav in site.nav %}
+      {% assign class = nil %}
+      {% if page.url contains nav.url %}
+          {% assign class = 'nav-active' %}
+      {% endif %}
+    {% if nav.url contains 'http://' or nav.url contains 'https://' %}
+      <a href="{{ nav.url }}"><span class="{{ class }}">{{ nav.name }}</span></a>
+    {% else %}
+    <a href="{{ nav.url | prepend: site.baseurl }}"><span class="{{ class }}">{{ nav.name }}</span></a>
+    {% endif %}
+    {% endfor %}
+  </h1>
+
+</header>
 
 <div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date">
+    <time>{{ page.date | date_to_string }}</time>
+  </span>
+    
+    <div class="post-tag">  
+        <ul>
+      <li>
+    {% assign sorted_tags = page.tags | sort %}
+{% for tag in sorted_tags %}
+        <a href="/blog/#{{ tag }}" class="tag"><span class="term">{{ tag }}</span></a>
+          {% endfor %}</li></ul>
+    </div>
+
   {{ content }}
+
+
+  <!-- Share -->
+  {% if page.share != false %}
+  <div class="post-share">
+    <hr>
+    {% include share.html %}
+    <hr>
+  </div>
+  {% endif %}
+
+  <!-- Disqus -->
+  {% if page.comments != false and site.disqus.id %}
+  <section id="disqus_thread"></section>
+  {% include disqus.html %}
+  {% endif %}
+
 </div>

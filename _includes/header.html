@@ -1,0 +1,27 @@
+<header class="header">
+    
+    <a href="{{ site.baseurl }}"><img class="img-circle center-me" src="images/profile.jpg" alt="tomoya"></a>
+
+    
+  <h1 class="header-title center-me">
+    <a href="{{ site.baseurl }}">{{ site.name }}::<span> n33t1</span></a>
+  </h1>
+
+        <hr class="break">
+    
+  <nav class="header-nav center-me">
+      
+    {% for nav in site.nav %}
+    {% if nav.url contains 'http://' or nav.url contains 'https://' %}
+    <a href="{{ nav.url }}">{{ nav.name }}</a>
+    {% else %}
+    <a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.name }}</a>
+    {% endif %}
+    {% endfor %}
+      
+
+
+  </nav>
+   
+    
+</header>

@@ -1,40 +1,11 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{{ page.title }}</title>
-    
-    <link rel="stylesheet" type="text/css" href="/css/main.css">
-      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-  
-  </head>
+<html lang="en">
+{% include head.html %}
+<body>
+  <div class="content-container">
+    {{ content }}
 
-
-  <body>
-    <nav>
-<ul>
-<li><a href="/">Home</a></li>
-<li><a href="/about">About</a></li>
-<li><a href="/blog">Blog</a></li>
-<li><a href="/project">Project</a></li>
-</ul>
-    </nav>
-<div class="container">
-
-  {{ content }}
-
-</div>
-  
-  <footer>
-   <ul>
-   <li><a href="mailto:n33t1root@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
-  <li><a href="https://github.com/n33t1"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-  <li><a href="https://twitter.com/n33t1"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-  <li><a href="http://weibo.com/1652791733/"><i class="fa fa-weibo" aria-hidden="true"></i></a></li>
-   <li><a href="http://www.piedpiper.com/"><i class="fa fa-pied-piper" aria-hidden="true"></i></a></li>
-    <li><a href="https://leetcode.com/n33t1/">leetcode</a></li>
-       
-   </ul>
-  </footer>
-  </body>
-
+    {% include footer.html %}
+  </div>
+</body>
 </html>
