@@ -9,11 +9,19 @@ layout: default
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
   <div class="list-post">
-    {% if post.link %}
-    <a href="{{ post.link }}">
-    {% else %}
-    <a href="{{ post.url | prepend: site.baseurl }}">
-    {% endif %}  
+     {% if post.link %}
+            {% if post.customlink %}
+                <a href="{{ post.customlink }}" class="hidden">
+            {% else %}
+                <a href="{{ post.link }}"> 
+           {% endif %} 
+      {% else %}
+            {% if post.customlink %}
+                <a href="{{ post.customlink }}" class="hidden">
+            {% else %}
+                <a href="{{ post.url | prepend: site.baseurl }}">  
+           {% endif %} 
+      {% endif %}   
       <div class="list-post-date">
         <time>{{ post.date | date_to_string }}</time>
       </div>
