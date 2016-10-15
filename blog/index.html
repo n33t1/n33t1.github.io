@@ -3,19 +3,6 @@ layout: page
 title: Blog
 permalink: /blog/
 ---
-
-
-<head>
-<style>
-    
-    .hidden {
-  display: none!important;
-  visibility: hidden!important;
-}
-    </style>
-
-</head>
-
 <body>
 
 {% capture site_tags %}
@@ -59,19 +46,20 @@ permalink: /blog/
 {% endfor %}
     </div>
 
-
 <div class="archive">
   <div class="archive-list">
   {% if site.posts.size == 0 %}
     <h2>No post found</h2>
   {% else %}
   {% for post in site.posts %}
-    <div class="archive-list-post">
-      {% if post.link %}
+  <div class="archive-list-post">
+      {% if post.customlink %}
+      <a href="{{ post.customlink }}" class="hidden">
+      {% else if post.link %}
       <a href="{{ post.link }}">
       {% else %}
       <a href="{{ post.url | prepend: site.baseurl }}">
-      {% endif %}  
+      {% endif %}      
         <span class="archive-list-post-title">
           {{ post.title }}
         </span>
@@ -127,6 +115,14 @@ function showContainer(tag) {
   var list = document.getElementById(tag + '-container');
   if(list) {
     list.setAttribute('class', 'archive-list');
+  }
+}
+    
+function hideProj(postProj) {
+  // loop through all lists and hide them
+  var lists = document.getElementsByClassName('archive-list-post');
+  for(var i=0; i < lists.length; i++) {
+    lists[i].setAttribute('class', 'archive-list-post hidden');
   }
 }
 </script>

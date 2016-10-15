@@ -1,8 +1,7 @@
 ---
-layout: page
+layout: project
 title: Project
 ---
-
 <div class="archive">
   <div class="archive-list">
   {% if site.posts.size == 0 %}
@@ -10,11 +9,13 @@ title: Project
   {% else %}
   {% for post in site.posts %}
     <div class="archive-list-post">
-      {% if post.link %}
-      <a href="{{ post.link }}">
+      {% if post.customlink %}
+      <a href="{{ post.customlink }}">
+      {% else if post.link %}
+      <a href="{{ post.link }}" class="hidden">
       {% else %}
-      <a href="{{ post.url | prepend: site.baseurl }}">
-      {% endif %}  
+      <a href="{{ post.url | prepend: site.baseurl }}" class="hidden">
+      {% endif %}    
         <span class="archive-list-post-title">
           {{ post.title }}
         </span>
