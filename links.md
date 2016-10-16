@@ -21,5 +21,5 @@ permalink: /links/
  [神聖かまってちゃん](http://wmg.jp/artist/kamattechan/) | 
  [phatmans after school](https://phatmansafterschool.com/) | 
  [amazarashi](http://www.amazarashi.com/) | 
- [Base Ball Bear](http://www.baseballbear.com/)|
+ [Base Ball Bear](http://www.baseballbear.com/) | 
  [LifeAwaits](https://lifeawaitsband.bandcamp.com/releases)
