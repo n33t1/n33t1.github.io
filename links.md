@@ -23,3 +23,9 @@ permalink: /links/
  [amazarashi](http://www.amazarashi.com/) | 
  [Base Ball Bear](http://www.baseballbear.com/) | 
  [LifeAwaits](https://lifeawaitsband.bandcamp.com/releases)
+
+
+
+**Interesting Stuff:**
+
+ [The Jargon File](http://www.catb.org/jargon/html/): Dictionary of computer programmer slangs     
