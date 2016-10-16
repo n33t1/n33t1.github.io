@@ -3,13 +3,16 @@ title: Links
 permalink: /links/
 ---
 
-**People smarter than me:**
-
+**People smarter than me:**    
  [Matrix67](http://www.matrix67.com/blog/): Random math fun   
  [Prof. Terence Tao](https://terrytao.wordpress.com/): Interesting articles on Number Theory and Calculus    
  [岛娘](http://www.shuizilong.com/house/): ACMer who writes about algorithm  
  
  
+ **Interesting Stuff:**    
+ [The Jargon File](http://www.catb.org/jargon/html/): Dictionary of computer programmer slangs   
+ 
+
  **Bands/Coding BGM**    
  [Radiohead](http://www.wasteheadquarters.com/) | 
  [Glass Animals](http://www.glassanimals.eu/) | 
@@ -26,6 +29,4 @@ permalink: /links/
 
 
 
-**Interesting Stuff:**
-
- [The Jargon File](http://www.catb.org/jargon/html/): Dictionary of computer programmer slangs     
+  
