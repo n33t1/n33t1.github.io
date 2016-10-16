@@ -5,7 +5,7 @@ permalink: /links/
 
 **People smarter than me:**    
  [Matrix67](http://www.matrix67.com/blog/): Random math fun   
- [Prof. Terence Tao](https://terrytao.wordpress.com/): Interesting articles on Number Theory and Calculus    
+ [What's new](https://terrytao.wordpress.com/): Prof. Terence Tao's articles on Number Theory and Calculus    
  [岛娘](http://www.shuizilong.com/house/): ACMer who writes about algorithm  
            
             
