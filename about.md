@@ -5,7 +5,7 @@ permalink: /about/
 
 {% include about.html %}
 
-Hi, I'm n33t1, full-stack web developer and ACMer in Boston/Beijing. Working on [Computer Networks](#), [Algorithms](#) and [Virtual Reality](#) now. Mainly use [C++](#), but tyring to get better at [Python](#) and [Node.js](#) now. 
+Hi there, I'm n33t1, full-stack web developer and ACMer in Boston/Beijing. Working on [Computer Networks](#), [Algorithms](#) and [Virtual Reality](#) now. Mainly use [C++](#), but tyring to get better at [Python](#) and [Node.js](#) at the same time. Maybe I will finish reading TAOCP one day.
 
 I'm also a drummer who likes Indie/Punk/Hardcore rock a lot. Also waste my life with Philosophy, Logics, Anime, Manga, Light-novel, Si-fi, Doodling, Video Editing and MOOC. 
 
