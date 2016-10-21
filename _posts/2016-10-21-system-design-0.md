@@ -7,175 +7,159 @@ tags: [systemDesign]
 comments: true
 share: false
 ---
+I finally beat procrastination and got a personal page. This theme is inspired by [Kiko Plus](https://github.com/AWEEKJ/Kiko-plus) theme, adapted with tag searching function from [drejkim](https://github.com/drejkim/drejkim.github.io), powered by [Jekyll](http://jekyllrb.com), hosted on [Github Pages](https://pages.github.com).
 
-#### Scenario
-What are the key functions:  
 
-1. User Engagement Numbers:   
-      Daily Active Users (DAU)/Monthly Active Users (MAU)   
-      eg. Twitter: MAU 320M, DAU ~150M+ 
-2. Design Process  
-   1. Enumerate   
-   For a social network app, all possible functions needed are:    
-      * Register / Login
-      * User Profile Display / Edit 
-      * Upload Image / Video
-      * Search
-      * Post / Share posts
-      * Timeline / Newsfeed
-      * Follow / Unfo a user
-    2. Sort  
-    Make a priority queue: 
-       * Tweet a post (most important)
-       * Timeline
-       * Newsfeed
-       * Fo/Unfo auser
-       * Register/ Login
-    3. Analysis & Predict   
-       * Concurrent User    
-            ```
-            Concurrent User = DAU * Average Request Per User Per day / 86400 (seconds in a day) 
-            ```
-        * QPS(Queries Per Second)   
-        Read QPS vs Write QPS   
-        QPS vs Web Server/ Database:   
-        
-            * 1k QPS : one Web Server/ one SQL Database
-            * 10k QPS : one NoSQL Database(Cassandra)
-            * 1M QPS : one NoSQL Database(Memcached)
-              
-#### Service 
-Break it into sub modules: Reply + Merge   
+Below is a cheatsheet I stole from [A Full and Comprehensive Style Test](https://aweekj.github.io/Kiko-plus/2016-08-15/style-test/) and [Syntax Highlighting Post](https://aweekj.github.io/Kiko-plus/2013-08-16/code-highlighting-post/) for markdown language syntax I need for blogging in the theme.
 
-1. From a receptionist's view:     
-      * User Service (Reiger/Login)
-      * Tweet Service (Post + Newfeed + Timeline)
-      * Media Service (Upload Img/Vid)
-      * Friendship Service (Fo/Unfo)
+# Body text
 
-              
-#### Service 
-Break it into sub modules: Reply + Merge   
+---
 
-1. From a receptionist's view:     
-      * User Service (Reiger/Login)
-      * Tweet Service (Post + Newfeed + Timeline)
-      * Media Service (Upload Img/Vid)
-      * Friendship Service (Fo/Unfo)
-      
-      
-#### Storage   
-data IO 
+# Heading 1
 
-1. Database types:         
-      * SQL Database (Relation based)    
-           * Used to store User table
-           * MySQL
-      * NoSQL Database (Not relation based)
-           * Used to store Tweets and Social Graphs (Followers) 
-           * MongoDB
-      * File System
-           * Used to store Media Files
-           * S3
-           
-2. Design Process      
-      **Select** Database types for Application/Service, then **Schema** Data Structure  
-      For example, in the social media app case, the desired Database for each services are: 
-      * User Service (Reiger/Login)
-        * Select: SQL Database, MySQL
-        * Schema: 
-       
-| User   Table |  |
-|:--------|:-------:|
-| id   | integer   |
-| username   | varchar   |
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
+
+Lorem ipsum dolor sit amet, [test link](#) adipiscing elit. **This is strong.** Nullam dignissim convallis est. Quisque aliquam. *This is emphasized.* Donec faucibus. Nunc iaculis suscipit dui. 5<sup>3</sup> = 125. Water is H<sub>2</sub>O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. <u>Underline</u>. Maecenas ornare tortor. Donec sed tellus eget `COPY filename` sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, <del>Dinner’s at 5:00.</del> commodo vitae, feugiat in, nunc. Morbi imperdiet augue <mark>mark element</mark> quis tellus.
+
+# Images
+
+![Large example image](http://placehold.it/800x400 "Large example image")
+![Medium example image](http://placehold.it/400x200 "Medium example image")
+![Small example image](http://placehold.it/200x200 "Small example image")
+
+# Blockquotes
+
+> Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.
+
+# List Types
+
+### Ordered Lists
+
+1. Item one
+   1. sub item one
+   2. sub item two
+   3. sub item three
+2. Item two
+
+### Unordered Lists
+
+* Item one
+  * sub item one
+  * sub item two
+  * sub item three
+* Item two
+* Item three
+
+### Definition Lists
+
+kramdown
+: A Markdown-superset converter
+
+Maruku
+: Another Markdown-superset converter
+
+# Tables
+
+| Header1 | Header2 | Header3 |
+|:--------|:-------:|--------:|
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
 |----
-| email   | varchar   | 
-| password   | varchar   | 
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+|=====
+| Foot1   | Foot2   | Foot3
 
-      * Tweet Service (Post + Newfeed + Timeline)
-        * NoSQL Database, MongoDB 
-        * Schema:     
-                | Friendship Table     |            | 
-                | ------------- |:-------------:| 
-                | id      | integer | 
-                | from_user_id     | Foreign Key      | 
-                | to_user_id | Foreign Key     |   
-     * Media Service (Upload Img/Vid)
-       * File System, S3
-       * Schema:     
-                | Tweet Table     |            | 
-                | ------------- |:-------------:|
-                |  id      | integer | 
-                | user_id     | Foreign Key      | 
-                | content | text      |   
-                | created_at | timestamp      | 
-     * Friendship Service (Fo/Unfo)
-        * SQL/NoSQL Database     
 
-        In summary, a program can be viewed as algorithm + data structure, while a system can be viewed as service + data storage
-3. Pull Model:
-    * Algorithm   
-        * Merge K Sorted Arrays  
-    * Complexity  
-        * News Feed => O(n)  **<- slow**
-        * Post a tweet => 1 DB Write  
-    * getNewsFeed(request)  
-     
-        ```python
-         getNewsFeed(request)
-         followings = DB.getFollowings(user=request.user)
-         news_feed = empty
-         for follow in followings:
-            tweets = DB.getTweets(follow.to_user, 100)
-            news_feed.merge(tweets)
-         sort(news_feed)
-         return news_feed
-        ``` 
-    * postTweet(request, tweet) 
-     
-        ```python
-         DB.insertTweet(request.user, tweet)
-         return success
-        ``` 
-4. Push Model:
-    * Algorithm   
-        * List  
-    * Complexity  
-        * News Feed => 1 DB Write 
-        * Post a tweet => O(n)  **<- slow**  
-    * getNewsFeed(request)  
-     
-        ```python
-         getNewsFeed(request)  
-         return DB.getNewsFeed(request.user)
-        ``` 
-    * postTweet(request, tweet_info) 
-     
-        ```python
-         postTweet(request, tweet_info) 
-         tweet = DB.insertTweet(request.user, tweet_info)
-         AsyncService.fanoutTweet(request.user, tweet)
-         return success
-        ``` 
-    * AsyncService::fanoutTweet(user, tweet) 
-     
-        ```python
-         AsyncService::fanoutTweet(user, tweet) 
-         followers = DB.getFollowers(user)
-         for follower in followers:
-             DB.insertNewsFeed(tweet, follower)
-        ``` 
-4. News Feed Table:
-    * Algorithm   
-        * List  
-    * Complexity  
-        * News Feed => 1 DB Write 
-        * Post a tweet => O(n)  **<- slow**  
-#### Service 
-Break it into sub modules: Reply + Merge
-1. From a receptionist's view:   
-    * User Service (Reiger/Login)
-    * Tweet Service (Post + Newfeed + Timeline)
-    * Media Service (Upload Img/Vid)
-    * Friendship Service (Fo/Unfo)
+# Code Snippets
+
+Syntax highlighting via Rouge
+
+```css
+#container {
+  float: left;
+  margin: 0 -240px 0 0;
+  width: 100%;
+}
+```
+
+Non Pygments code example
+
+    <div id="awesome">
+        <p>This is great isn't it?</p>
+    </div>
+
+Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.[^1]
+
+[^1]: <http://en.wikipedia.org/wiki/Syntax_highlighting>
+
+### Highlighted Code Blocks
+
+To modify styling and highlight colors edit `/_sass/_highlighter.scss`.
+
+```css
+#container {
+    float: left;
+    margin: 0 -240px 0 0;
+    width: 100%;
+}
+```
+
+```html
+{% raw %}<nav class="pagination" role="navigation">
+    {% if page.previous %}
+        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous article</a>
+    {% endif %}
+    {% if page.next %}
+        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next article</a>
+    {% endif %}
+</nav><!-- /.pagination -->{% endraw %}
+```
+
+```ruby
+module Jekyll
+  class TagIndex < Page
+    def initialize(site, base, dir, tag)
+      @site = site
+      @base = base
+      @dir = dir
+      @name = 'index.html'
+      self.process(@name)
+      self.read_yaml(File.join(base, '_layouts'), 'tag_index.html')
+      self.data['tag'] = tag
+      tag_title_prefix = site.config['tag_title_prefix'] || 'Tagged: '
+      tag_title_suffix = site.config['tag_title_suffix'] || '&#8211;'
+      self.data['title'] = "#{tag_title_prefix}#{tag}"
+      self.data['description'] = "An archive of posts tagged #{tag}."
+    end
+  end
+end
+```
+
+
+### Standard Code Block
+
+    {% raw %}<nav class="pagination" role="navigation">
+        {% if page.previous %}
+            <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous article</a>
+        {% endif %}
+        {% if page.next %}
+            <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next article</a>
+        {% endif %}
+    </nav><!-- /.pagination -->{% endraw %}
+
+### GitHub Gist Embed
+
+An example of a Gist embed below.
+
+<script src="https://gist.github.com/mmistakes/43a355923921d22cd993.js"></script>
+
