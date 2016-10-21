@@ -84,22 +84,16 @@ data IO
       * User Service (Reiger/Login)
         * Select: SQL Database, MySQL
         * Schema: 
-        
-        
-| Header1 | Header2 | Header3 |
-|:--------|:-------:|--------:|
-| cell1   | cell2   | cell3   |
-| cell4   | cell5   | cell6   |
+       
+| User   Table |  |
+|:--------|:-------:|
+| id   | integer   |
+| username   | varchar   |
 |----
-| cell1   | cell2   | cell3   |
-| cell4   | cell5   | cell6   |
-                | User   Table     |            | 
-                | ------------- |:-------------:| 
-                | id      | integer | 
-                | username     | varchar      | 
-                | email | varchar      |   
-                | password | varchar      | 
-    * Tweet Service (Post + Newfeed + Timeline)
+| email   | varchar   | 
+| password   | varchar   | 
+
+      * Tweet Service (Post + Newfeed + Timeline)
         * NoSQL Database, MongoDB 
         * Schema:     
                 | Friendship Table     |            | 
