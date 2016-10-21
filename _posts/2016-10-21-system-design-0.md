@@ -54,24 +54,33 @@ Break it into sub modules: Reply + Merge
       * Friendship Service (Fo/Unfo)
 
 #### Storage   
-data IO  
-1. Database types:
-    * SQL Database (Relation based) 
-            * Used to store User table
-            * MySQL
-        * NoSQL Database (Not relation based)
-            * Used to store Tweets and Social Graphs (Followers) 
-            * MongoDB
-        * File System
-            * Used to store Media Files
-            * S3
-2. Design Process   
-    **Select** Database types for Application/Service, then **Schema** Data Structure  
-    For example, in the social media app case, the desired Database for each services are: 
-    * User Service (Reiger/Login)
+data IO 
+
+1. Database types:         
+      * SQL Database (Relation based)    
+           * Used to store User table
+           * MySQL
+      * NoSQL Database (Not relation based)
+           * Used to store Tweets and Social Graphs (Followers) 
+           * MongoDB
+      * File System
+           * Used to store Media Files
+           * S3
+           
+2. Design Process      
+      **Select** Database types for Application/Service, then **Schema** Data Structure  
+      For example, in the social media app case, the desired Database for each services are: 
+      * User Service (Reiger/Login)
         * Select: SQL Database, MySQL
         * Schema:     
-            | User   Table     |            | 
+| Header1 | Header2 | Header3 |
+|:--------|:-------:|--------:|
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+|----
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+                | User   Table     |            | 
                 | ------------- |:-------------:| 
                 | id      | integer | 
                 | username     | varchar      | 
@@ -80,17 +89,17 @@ data IO
     * Tweet Service (Post + Newfeed + Timeline)
         * NoSQL Database, MongoDB 
         * Schema:     
-            | Friendship Table     |            | 
+                | Friendship Table     |            | 
                 | ------------- |:-------------:| 
                 | id      | integer | 
                 | from_user_id     | Foreign Key      | 
                 | to_user_id | Foreign Key     |   
      * Media Service (Upload Img/Vid)
        * File System, S3
-        * Schema:     
+       * Schema:     
                 | Tweet Table     |            | 
-                | ------------- |:-------------:| 
-                | id      | integer | 
+                | ------------- |:-------------:|
+                |  id      | integer | 
                 | user_id     | Foreign Key      | 
                 | content | text      |   
                 | created_at | timestamp      | 
