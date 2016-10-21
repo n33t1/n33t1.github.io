@@ -53,6 +53,17 @@ Break it into sub modules: Reply + Merge
       * Media Service (Upload Img/Vid)
       * Friendship Service (Fo/Unfo)
 
+              
+#### Service 
+Break it into sub modules: Reply + Merge   
+
+1. From a receptionist's view:     
+      * User Service (Reiger/Login)
+      * Tweet Service (Post + Newfeed + Timeline)
+      * Media Service (Upload Img/Vid)
+      * Friendship Service (Fo/Unfo)
+      
+      
 #### Storage   
 data IO 
 
@@ -72,7 +83,9 @@ data IO
       For example, in the social media app case, the desired Database for each services are: 
       * User Service (Reiger/Login)
         * Select: SQL Database, MySQL
-        * Schema:     
+        * Schema: 
+        
+        
 | Header1 | Header2 | Header3 |
 |:--------|:-------:|--------:|
 | cell1   | cell2   | cell3   |
