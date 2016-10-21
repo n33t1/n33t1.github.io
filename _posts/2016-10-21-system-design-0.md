@@ -12,8 +12,8 @@ share: false
 What are the key functions:  
 
 1. User Engagement Numbers:   
-   Daily Active Users (DAU)/Monthly Active Users (MAU)   
-   eg. Twitter: MAU 320M, DAU ~150M+ 
+      Daily Active Users (DAU)/Monthly Active Users (MAU)   
+      eg. Twitter: MAU 320M, DAU ~150M+ 
 2. Design Process  
    1. Enumerate   
    For a social network app, all possible functions needed are:    
