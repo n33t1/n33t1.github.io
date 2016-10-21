@@ -32,10 +32,10 @@ What are the key functions:
        * Fo/Unfo auser
        * Register/ Login
     3. Analysis & Predict   
-       * Concurrent User
-          ```
-           Concurrent User = DAU * Average Request Per User Per day / 86400 (seconds in a day) 
-          ```
+       * Concurrent User    
+            ```
+            Concurrent User = DAU * Average Request Per User Per day / 86400 (seconds in a day) 
+            ```
         * QPS(Queries Per Second)   
         Read QPS vs Write QPS   
         QPS vs Web Server/ Database:   
