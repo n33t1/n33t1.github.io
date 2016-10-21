@@ -10,9 +10,10 @@ share: false
 
 #### Scenario
 What are the key functions:  
+
 1. User Engagement Numbers:   
    Daily Active Users (DAU)/Monthly Active Users (MAU)   
-eg. Twitter: MAU 320M, DAU ~150M+ 
+   eg. Twitter: MAU 320M, DAU ~150M+ 
 2. Design Process  
    1. Enumerate   
    For a social network app, all possible functions needed are:    
@@ -32,22 +33,25 @@ eg. Twitter: MAU 320M, DAU ~150M+
        * Register/ Login
     3. Analysis & Predict   
        * Concurrent User
-          ```sh
+          ```
            Concurrent User = DAU * Average Request Per User Per day / 86400 (seconds in a day) 
           ```
         * QPS(Queries Per Second)   
         Read QPS vs Write QPS   
-        QPS vs Web Server/ Database: 
+        QPS vs Web Server/ Database:   
+        
             * 1k QPS : one Web Server/ one SQL Database
             * 10k QPS : one NoSQL Database(Cassandra)
             * 1M QPS : one NoSQL Database(Memcached)
+              
 #### Service 
-Break it into sub modules: Reply + Merge
-1. From a receptionist's view:   
-    * User Service (Reiger/Login)
-    * Tweet Service (Post + Newfeed + Timeline)
-    * Media Service (Upload Img/Vid)
-    * Friendship Service (Fo/Unfo)
+Break it into sub modules: Reply + Merge   
+
+1. From a receptionist's view:     
+      * User Service (Reiger/Login)
+      * Tweet Service (Post + Newfeed + Timeline)
+      * Media Service (Upload Img/Vid)
+      * Friendship Service (Fo/Unfo)
 
 #### Storage   
 data IO  
