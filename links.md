@@ -7,6 +7,7 @@ permalink: /links/
  [Matrix67](http://www.matrix67.com/blog/): Random math fun   
  [What's new](https://terrytao.wordpress.com/): Terence Tao's blog    
  [岛娘](http://www.shuizilong.com/house/): ACMer who writes about algorithm  
+ [Aaron Swartz](http://www.aaronsw.com/weblog/): Too bad he died
            
             
  **Interesting Stuff:**    
