@@ -8,16 +8,16 @@ layout: default
 {% else %}
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
-  <div class="list-post">
+   <div class="list-post">
      {% if post.link %}
             {% if post.customlink %}
-                <a href="{{ post.customlink }}" class="hidden">
+                <a href="{{ post.customlink }}">
             {% else %}
                 <a href="{{ post.link }}"> 
            {% endif %} 
       {% else %}
             {% if post.customlink %}
-                <a href="{{ post.customlink }}" class="hidden">
+                <a href="{{ post.customlink }}">
             {% else %}
                 <a href="{{ post.url | prepend: site.baseurl }}">  
            {% endif %} 
@@ -34,7 +34,6 @@ layout: default
       </div>
       {% endif %}
     </a>
-
 
   </div>
 {% endfor %}
