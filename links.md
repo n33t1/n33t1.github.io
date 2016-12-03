@@ -5,9 +5,9 @@ permalink: /links/
 
 **People smarter than me:**    
  [Matrix67](http://www.matrix67.com/blog/): Random math fun   
- [What's new](https://terrytao.wordpress.com/): Terence Tao's blog    
- [岛娘](http://www.shuizilong.com/house/): ACMer who writes about algorithm  
- [Aaron Swartz](http://www.aaronsw.com/weblog/): Too bad he died
+ [What's new](https://terrytao.wordpress.com/): Terence Tao   
+ [岛娘](http://www.shuizilong.com/house/):  秀吉
+ [Aaron Swartz](http://www.aaronsw.com/weblog/): HE DIED
  [WJMZBMR](http://wjmzbmr.com/): HE IS MY GOD
            
             
