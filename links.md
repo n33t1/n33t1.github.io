@@ -8,6 +8,7 @@ permalink: /links/
  [What's new](https://terrytao.wordpress.com/): Terence Tao's blog    
  [岛娘](http://www.shuizilong.com/house/): ACMer who writes about algorithm  
  [Aaron Swartz](http://www.aaronsw.com/weblog/): Too bad he died
+ [WJMZBMR](http://wjmzbmr.com/): HE IS MY GOD
            
             
  **Interesting Stuff:**    
@@ -17,6 +18,7 @@ permalink: /links/
  **Bands/Coding BGM**    
  [Radiohead](http://www.wasteheadquarters.com/) | 
  [Glass Animals](http://www.glassanimals.eu/) | 
+ [Mansun](http://rateyourmusic.com/artist/mansun) | 
  [One Ok Rock](http://www.oneokrock.com/) | 
  [Radwimps](http://radwimps.jp/) | 
  [凛として時雨](http://www.sigure.jp/) | 
