@@ -14,7 +14,8 @@ Tleft and Tright
     - Binary Tree Traversal
         - Visit every node, without skipping any node. 
         - There are six simple recursive algorithms for tree traversal:
-            - In-order: RNL, LNR 
+            - In-order: RNL, LNR    
+            
             - ```
                 template <typename T>
                 void inOrderOutput(tnode<T> *t, const string& separator = “ “){
@@ -26,7 +27,20 @@ Tleft and Tright
                     }
                 }
                 ```
-            - Post-order: RLN, LRN 
+            - Post-order: RLN, LRN        
+```
+Dijkstra(G,w,s)
+    Init-Single-Source(G,s)
+    S = empty
+    Q = G.V
+    while Q !empty
+        u = Extract-Min(Q)
+        S = S U {u}
+        for each vertex v in G.Adj(u)
+            Relax(u,v,w) 
+```
+
+            
             - ```
                 template <typename T>
                 void postOrderOutput(tnode<T> *t, const string& separator = “ “){
@@ -38,7 +52,8 @@ Tleft and Tright
                     }
                 }
                 ```
-            - Pre-order: NRL, NLR
+            - Pre-order: NRL, NLR        
+            
              - ```
                 template <typename T>
                 void preOrderOutput(tnode<T> *t, const string& separator = “ “){
@@ -49,12 +64,13 @@ Tleft and Tright
                     preOrderOutput<T>(t->right,separator); // R step
                     }
                 }
-                ```
+                ```       
     - Tree applications
         - Deleting a tree
             - Use recursive tree traversal to de-allocate the nodes in a binary tree.
             - Post Order: LRN ensures that the parent is deleted last to avoid
-memory leaks.
+memory leaks.           
+
              - ```
                 template <typename T>
                 void deleteTree(tnode<T> *t) {
@@ -81,8 +97,9 @@ memory leaks.
                 }
                 ```
         - Finding the depth of a tree
-            - Scan the tree to find the deepest leaf:
-             - ```
+            - Scan the tree to find the deepest leaf:         
+            
+            - ```
                 template <typename T>
                 void depth(tnode<T> *t) {
                     int depthVal, depthLeft, depthRight;
@@ -100,7 +117,7 @@ memory leaks.
         - The recursive traverse methods go down and up the tree.
         - Sometimes, we want to go by levels instead
         - Iterative Level Order Scan 
-        - Uses a queue as an intermediate container
+        - Uses a queue as an intermediate container       
         - ```
                template <typename T>
                 void levelOrderOutput(tnode<T> *t, const string& separator = “ “) {
