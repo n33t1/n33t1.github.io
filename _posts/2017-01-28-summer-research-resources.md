@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "summerResearchPrograms.features({undergraduate,EECS,!UScitizen})"
-description: "for the invisible groups"
+title: "summerResearchPrograms(){undergraduate,EECS,!UScitizen}"
+description: "for the invisible groups pursuing PhD"
 date: 2017-01-28
 tags: [miscellaneous]
 comments: true
