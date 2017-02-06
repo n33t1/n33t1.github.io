@@ -3,7 +3,7 @@ layout: post
 title: "Game of DL Stacks"
 description: "A research on machine intelligence tools for research or engineering among Caffe, MXNet, Torch/PyTorch and TensorFlow"
 date: 2017-02-05
-tags: [deep learning]
+tags: [deep learning, research]
 comments: true
 share: true
 ---
