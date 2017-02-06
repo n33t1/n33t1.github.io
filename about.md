@@ -15,4 +15,4 @@ I'm currently researching hardware acceleration for Machine Learning with [prof.
 Trying to be a punk/hardcore drummer. Big fan for electrocore, punk, art/indie rock. I listed a bunch of bands I'm into. BTW my prof pic is Tomoya from [One Ok Rock](http://www.oneokrock.com/)!
 
 
-Here is my home page on [Github](https://github.com/n33t1).
+Check out my home page on [Github](https://github.com/n33t1)<3 
