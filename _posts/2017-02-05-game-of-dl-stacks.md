@@ -11,11 +11,12 @@ share: true
 Hook blablabla. This article will compare four Machine Learning (ML) libraries that was popular on the Internet. The comparison matrixes is inherited from [DLIF(Deep Learning Implementations and Frameworks) tutorial](https://sites.google.com/site/dliftutorial/), [Benchmarking State-of-the-Art Deep Learning Software Tools](https://arxiv.org/pdf/1608.07249v6.pdf), and [Caffe: Convolutional Architecture for Fast Feature Embedding](http://ucb-icsi-vision-group.github.io/caffe-paper/caffe.pdf). The goal is to understand the unique pros and cons of the tech stacks and what they are most useful for, and then choose one for performing experiment for ML hardware research.
 
 ![alt text](https://raw.githubusercontent.com/n33t1/n33t1.github.io/master/images/Screen%20Shot%202017-02-06%20at%202.39.17%20AM.png)
-Framework Comparison among various machine learning frameworks from DLIF presentation[^1]
+Framework Comparison among various machine learning frameworks from DLIF presentation[^1]    
 
-![alt text](http://en.community.dell.com/resized-image/__size/1650x0/__key/communityserver-blogs-components-weblogfiles/00-00-00-45-39/image007.png)
-Speedup Comarison for various machine learning frameworks made by the Dell Lab [^2]
-[^2]: <http://en.community.dell.com/techcenter/high-performance-computing/b/general_hpc/archive/2016/11/11/deep-learning-performance-with-p100-gpus>
+![alt text](http://en.community.dell.com/resized-image/__size/1650x0/__key/communityserver-blogs-components-weblogfiles/00-00-00-45-39/image007.png)      
+Speedup Comarison for various machine learning frameworks made by the Dell Lab [^2]      
+[^2]: <http://en.community.dell.com/techcenter/high-performance-computing/b/general_hpc/archive/2016/11/11/deep-learning-performance-with-p100-gpus>      
+
 ### Caffe
 * Features:
 	* Write NNs in declarative configuration files (Framework builds layers of NNs as written in the files)
