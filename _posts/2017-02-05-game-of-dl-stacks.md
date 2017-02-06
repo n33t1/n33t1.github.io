@@ -8,10 +8,6 @@ comments: true
 share: true
 ---
 
-Syntax highlighting is a feature that displays source code, in different colors and fonts according to the category of terms. This feature facilitates writing in a structured language such as a programming language or a markup language as both structures and syntax errors are visually distinct. Highlighting does not affect the meaning of the text itself; it is intended only for human readers.[^4]
-
-[^4]: <http://en.wikipedia.org/wiki/Syntax_highlighting>
-
 Hook blablabla. This article will compare four Machine Learning (ML) libraries that was popular on the Internet. The comparison matrixes is inherited from [DLIF(Deep Learning Implementations and Frameworks) tutorial](https://sites.google.com/site/dliftutorial/), [Benchmarking State-of-the-Art Deep Learning Software Tools](https://arxiv.org/pdf/1608.07249v6.pdf), and [Caffe: Convolutional Architecture for Fast Feature Embedding](http://ucb-icsi-vision-group.github.io/caffe-paper/caffe.pdf). The goal is to understand the unique pros and cons of the tech stacks and what they are most useful for, and then choose one for performing experiment for ML hardware research.
 
 ![alt text](https://raw.githubusercontent.com/n33t1/n33t1.github.io/master/images/Screen%20Shot%202017-02-06%20at%202.39.17%20AM.png)
