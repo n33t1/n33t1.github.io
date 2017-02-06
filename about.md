@@ -12,7 +12,7 @@ Full stack, but mainly front-end. I'm using Vue.js for Web Dev while using React
 I'm currently researching hardware acceleration for Machine Learning with [prof. Xue Lin](http://www.ece.neu.edu/people/lin-xue). I'm trying to write logs each week to document what I have learn so far. No paper yet, but hopefully I can get somewhere by the end of the semester.
 
 ### Drumming
-Trying to be a punk/hardcore drummer. Big fan for electrocore, punk, art/indie rock. I listed a bunch of bands I'm into. BTW my prof pic is Tomoya from [One Ok Rock](http://www.oneokrock.com/)!
+Trying to be a punk/hardcore drummer. Big fan for electrocore, punk, art/indie rock. I listed a bunch of bands I'm into in the [Links](http://www.n33t1.com/links/) page. BTW my prof pic is Tomoya from [One Ok Rock](http://www.oneokrock.com/)!
 
 
 Check out my home page on [Github](https://github.com/n33t1)<3 
