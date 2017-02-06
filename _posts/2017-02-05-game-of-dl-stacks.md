@@ -103,9 +103,6 @@ Speedup Comarison for various machine learning frameworks made by the Dell Lab [
 	* Backprop may lose features that are available for graphs
 	* Updated formulae are not integreted to computational graphs
 	* For PyTorch, iterations are hard to optimize
-* Noticeable Users: 
-    * OpenAI [https://openai.com/blog/]
-    * DeepMind [https://research.googleblog.com/2016/04/deepmind-moves-to-tensorflow.html]
 
 ### MXNet
 * Features:
@@ -131,6 +128,3 @@ Speedup Comarison for various machine learning frameworks made by the Dell Lab [
 	* Backprop may lose features that are available for graphs
 	* Updated formulae are not integreted to computational graphs
 	* Hard to build different graphs for different iterations
-* Noticeable Users: 
-    * OpenAI [https://openai.com/blog/]
-    * DeepMind [https://research.googleblog.com/2016/04/deepmind-moves-to-tensorflow.html]
