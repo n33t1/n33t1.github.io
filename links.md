@@ -4,7 +4,7 @@ permalink: /links/
 ---
 
 **Cool Kids:** 
- ACMers: [tourist](http://codeforces.com/profile/tourist),[岛娘](http://www.shuizilong.com/house/)，[sevenkplus](http://sevenkplus.com/),[WJMZBMR](https://sites.google.com/site/wjmzbmr/home)
+ ACMers: [tourist](http://codeforces.com/profile/tourist),[岛娘](http://www.shuizilong.com/house/),[sevenkplus](http://sevenkplus.com/),[WJMZBMR](https://sites.google.com/site/wjmzbmr/home)
  Ppl good at math:[Matrix67](http://www.matrix67.com/blog/), [What's new](https://terrytao.wordpress.com/)
  NULL:[Aaron Swartz](http://www.aaronsw.com/weblog/), [Useless Duck Company](https://www.youtube.com/user/nicholmikey)
            
