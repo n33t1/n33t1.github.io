@@ -3,16 +3,14 @@ title: Links
 permalink: /links/
 ---
 
-**People smarter than me:**    
- [Matrix67](http://www.matrix67.com/blog/): Random math fun   
- [What's new](https://terrytao.wordpress.com/): Terence Tao   
- [岛娘](http://www.shuizilong.com/house/):  秀吉    
- [Aaron Swartz](http://www.aaronsw.com/weblog/): HE DIED    
- [WJMZBMR](http://wjmzbmr.com/): HE IS MY GOD    
+**Cool Kids:** 
+ ACMers: [tourist](http://codeforces.com/profile/tourist),[岛娘](http://www.shuizilong.com/house/)，[sevenkplus](http://sevenkplus.com/),[WJMZBMR](https://sites.google.com/site/wjmzbmr/home)
+ Ppl good at math:[Matrix67](http://www.matrix67.com/blog/), [What's new](https://terrytao.wordpress.com/)
+ NULL:[Aaron Swartz](http://www.aaronsw.com/weblog/), [Useless Duck Company](https://www.youtube.com/user/nicholmikey)
            
             
  **Interesting Stuff:**    
- [The Jargon File](http://www.catb.org/jargon/html/): Dictionary of computer programmer slangs   
+ [The Jargon File](http://www.catb.org/jargon/html/) 
             
            
  **Bands/Coding BGM**    
@@ -28,7 +26,11 @@ permalink: /links/
  [phatmans after school](https://phatmansafterschool.com/) | 
  [amazarashi](http://www.amazarashi.com/) | 
  [Base Ball Bear](http://www.baseballbear.com/) | 
- [LifeAwaits](https://lifeawaitsband.bandcamp.com/releases)
+ [LifeAwaits](https://lifeawaitsband.bandcamp.com/releases) | 
+ [Crystal Lake](http://crystallake.jp/) |
+ ...
+ 
+ If that's also your playlist, we can be friend on [网易云音乐](http://music.163.com/#/user/home?id=63382414)
 
 
 
