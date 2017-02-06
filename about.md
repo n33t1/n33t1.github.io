@@ -6,6 +6,9 @@ permalink: /about/
 {% include about.html %}
 
 Hi, I'm n33t1. Developer and Research based in Boston. Also doing [eCFT](http://mitrecyberacademy.org/competitions/embedded/) competition this semester.    
+          
+              
+              
 
 ### Web/IOS Dev
 Full stack, but mainly front-end. I'm using Vue.js for Web Dev while using React Native for IOS. If you also live in Boston and you use same stack or you are a backend developer, we can team up for hackathon!
