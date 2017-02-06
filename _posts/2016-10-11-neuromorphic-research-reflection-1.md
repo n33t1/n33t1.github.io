@@ -3,7 +3,7 @@ layout: post
 title: "Neuromorphic Research Reflection - Week 1"
 description: "A basic view"
 date: 2017-01-20
-tags: [deep learning]
+tags: [deep learning, research]
 comments: true
 share: true
 ---
