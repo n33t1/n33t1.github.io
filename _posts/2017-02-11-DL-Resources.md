@@ -8,6 +8,8 @@ comments: true
 share: true
 --- 
 
+Include but not limited to:
+
 * [Siraj Raval's Youtube Channel](https://www.youtube.com/channel/UCWN3xxRkmTPmbKwht9FuE5A)
   * Basics ideas in Machine Learning, and TensorFlow tutorials
   * He makes things really clear
