@@ -3,7 +3,7 @@ layout: post
 title: "'Machine '+'Learning '*2+'Resources'"
 description: "More to be added"
 date: 2016-10-11
-tags: [miscellaneous]
+tags: [deep learning]
 comments: true
 share: true
 --- 
