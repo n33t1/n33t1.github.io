@@ -31,8 +31,7 @@ permalink: /links/
  [Crystal Lake](http://crystallake.jp/) |
  ...
  
- If that's also your playlist, we can be friend on [网易云音乐](http://music.163.com/#/user/home?id=63382414)
-
+ 
 
 
   
