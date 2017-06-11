@@ -5,17 +5,10 @@ permalink: /about/
 
 {% include about.html %}
 
-Died and complicated 
-         
-               
-                   
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    .
+Died and complicated    
+&nbsp;    
+&nbsp;     
+&nbsp;     
+&nbsp;      
+&nbsp;         
+&nbsp;
