@@ -5,7 +5,7 @@ permalink: /about/
 
 {% include about.html %}
 
-Died and complicated    
+機械に使われたいのか、機械を使いたいのか…どっちだ？    
 &nbsp;    
 &nbsp;     
 &nbsp;     
