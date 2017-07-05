@@ -61,7 +61,7 @@ function addOffset(style = {}) {
 
 ### <a name="a2"></a>Rest and Spread Operator
 
-* #### Rest Operator:    
+* Rest Operator:    
 When passing in multiple arguments, we can use rest operator to capture a list of arguments. For example, if we have an addNumbers function, with too many numbers as parameters to add, say like `addNumbers(1,2,3,4,5)`, in which case our corresponding function will be like `addNumbers(a,b,c,d,e)`. But with rest operator, we can simplify the above arguments to just `addNumbers(...numbers)`. 
 
 ```javascript
@@ -84,7 +84,7 @@ function addNumbers(...numbers){
 addNumbers(1,2,3,4,5); //15
 ```
 
-* #### Spread Operator:    
+* Spread Operator:    
 Spread Operator is similar to js concat function, but with more freedom (you can add a single element to the concated arrays). You use spread operator when you want to merge diffenent arrays or elements together. 
 
 ```javascript
