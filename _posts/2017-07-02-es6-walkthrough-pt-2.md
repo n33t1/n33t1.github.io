@@ -84,7 +84,7 @@ function addNumbers(...numbers){
 addNumbers(1,2,3,4,5); //15
 ```
 
-* Spread Operator:    
+* **Spread Operator:**    
 Spread Operator is similar to js concat function, but with more freedom (you can add a single element to the concated arrays). You use spread operator when you want to merge diffenent arrays or elements together. 
 
 ```javascript
@@ -390,3 +390,242 @@ class Snake extends Monster {
     }
 }
 ```
+
+### <a name="a5"></a>Generators
+
+For let loop is an iterating tool just like foreach or map. In the example below, we are iterating over an array using for let loop.
+```javascript
+const colors = ['red', 'green', 'blue'];
+
+//for let loop
+for (let color of colors) {
+    console.log(color);
+}
+```
+
+**Rule of thumb:** If there is an undefined error showing up for function, it is highly likely that you forgot to return the value.
+
+* **what is a generator**
+
+What is a generator? Imao I don't have a deep understading in it yet... I also don't know the difference between iterator and generator... But basically, when you call .next() function, it will update the state only to the next state, until it is done. It's like if you have a for loop, and you call break at the end of each loop, the generator function will remember where you are and store the current stage. Then you call and execute the loop again, the generator will retrieve the value you stored, and update from there.
+
+```javascript
+function *numbers() {
+    yield
+}
+
+const gen = numbers();
+gen.next(); // {'done': false}
+gen.next(); // {'done': true}
+gen.next(); // {'done': true}
+```
+
+```javascript
+function *shopping() {
+    const stuffFromStore = yield 'cash';
+    const cleanClothes = yield 'laundry';
+    return [stuffFromStore, cleanClothes];
+}
+
+const gen = shopping();
+gen.next(); // {"value": "cash", "done": false}
+
+gen.next('groceries'); // {"value": "laundry", "done": false}
+gen.next('clean clothes'); // {"value": ["groceries", "clean clothes"], "done": false}
+```
+
+Given the features we discussed before, generator is useful for for let loop. 
+
+```javascript
+function* colors() {
+    yield 'red';
+    yield 'blue';
+    yield 'green';
+}
+const gen = colors();
+gen.next(); //red done false
+gen.next(); //blue done false
+gen.next(); //green done false
+gen.next(); //done
+
+const myColors = [];
+for (let color of colors()) {
+    myColors.push(color);
+}
+myColors; 
+```
+When we are processing data from json files, we can also use generators. Generator delegation allows you to combine multiple generators. You can skip fileds in json file you dont want. The steps to do so goes like:     
+1. If you want to use generator delegation, namely merge mutiple json objects you want, select one object, and put the rest inside of that json object. In the example, we put `testingTeam` inside of `engineeringTeam`.
+2. Then, start with `function *`, we write generators for each of the json objects we want. Then we are also gonna put the sub generators into a main generator, as how we call `testingTeamIterator` inside of `TeamIterator`.
+3. We use for let loop to loop over the generator and push the values we want into an array or whatever you want.
+
+
+
+```javascript
+const testingTeam = {
+    lead: 'Amanda',
+    tester: 'Bill'
+}
+
+const engineeringTeam = {
+    testingTeam,
+    size: 3,
+    department: 'Engineering',
+    lead: 'Jill',
+    meanager: 'Alex',
+    engineering: 'Dave'
+}
+
+function* TeamIterator(team) {
+    yield team.lead;
+    yield team.manager;
+    yield team.engineer;
+    const testingTeamGenerator = testingTeamIterator(team.testingTeam);
+    yield* testingteamGenerator;
+}
+
+function* TestingTeamIterator(team) {
+    yield team.lead;
+    yield team.tester;
+}
+
+const names = [];
+for (let name of TeamIterator(engineeringTeam)){
+    names.push(name);
+}
+name; // ["Jill", "Alex", "Dave", "Amanda", "Bill"]
+```
+
+But with **Symbol.iterator**, we can further clean up our code. In the previous algorithm, we need to write seperate generators for each json objects. But with **Symbol.iterator**, we are able to select the json fields directly inside of the object. And then inside of the for let loop, we just call the main json object. And then we are done.
+
+```javascript
+
+const testingTeam = {
+    lead: 'Amanda',
+    tester: 'Bill',
+    [Symbol.iterator]: function* () {
+        yield this.lead;
+        yield this.tester;
+    }
+};
+
+const engineeringTeam = {
+    testingTeam,
+    size: 3,
+    department: 'Engineering',
+    lead: 'Jill',
+    meanager: 'Alex',
+    engineering: 'Dave',
+    [Symbol.iterator]: function* () {
+        yield this.lead;
+        yield this.manager;
+        yield this.engineer
+        // yield* means it will find the iterator and iterate
+        yield* this.testingTeam;
+    }
+};
+
+const names = [];
+for (let name of engineeringTeam){
+    names.push(name);
+}
+name; // ["Jill", "Alex", "Dave", "Amanda", "Bill"]
+```
+
+* **generator with recursions**
+
+In web dev, we also use trees. Comments sections on reddit is an example of trees. But how do we implement tree data structure with javascript? We use generator with recursions! And how we do generator with recursions? Inside of the desired class, use `*[Symbol.iterator]` to call the generator. We 1) yield content for the parent comments, and 2) we use for let loop to yield the contents for the child comments.
+
+```javascript
+class Comment {
+    constructor(content, children) {
+        this.content = content;
+        this.children = children;
+    }
+
+    *[Symbol.iterator] () {
+        yield this.content;
+        for (let child of this.children) {
+            yield* child;
+        }
+    }
+}
+
+const children = [
+    new Comment('good comment', [new Comment("thanks man", [new Comment("yea bro", [])])]),
+    new Comment('nad comment', []),
+    new Comment('meh', [])
+];
+
+const tree = new Comment('Great Post!', children);
+tree; 
+//{"content":"Great Post!","children":[{"content":"good comment","children":[{"content":"thanks man","children":[{"content":"yea bro","children":[]}]}]},{"content":"nad comment","children":[]},{"content":"meh","children":[]}]}
+
+const values = [];
+for (let value of tree) {
+    values.push(value);
+}
+
+values; 
+//["Great Post!","good comment","thanks man","yea bro","nad comment","meh"]
+```
+
+### <a name="a6"></a>Promises
+
+ES6 has built-in Promise function. Basically, if everything worked out, have have status `resolve();` and the callback will be `then()`. If it failed, the status would be `reject()` and we go into the `catch()` for call back.
+
+```javascript
+promise = new Promise((resolve, reject) => {
+    resolve();
+});
+
+promise
+    .then(() => { console.log("finally finished!"); })
+    .then(( => { console.log("dadhasdhsakjhas!"); }));
+    .catch(() => { console.log("oh no!"); });
+//finally finished!
+//dadhasdhsakjhas!
+promise;
+```
+
+There are 3 states of promises: 1) unresolved, which means waiting for something to finish, 2) resolved, which means something finished and it all went ok, and 3) rejected, which means something finished and went bad.     
+
+Code below is an example for async code with promises. We can use `setTimeout()` or `onload()` depends on what we need.
+```javascript
+promise = new Promise((resolve, reject) => {
+    var request = newXHTMLRequest()
+    request.onload = () => {
+        resolve();
+    };
+});
+```
+
+Fetch is bascially a built-in function for GET? we have to return `response.json()` in order to get the real data. But fetch will not return any server error above 3000. It will only goes into the catch block when the network request fails.
+
+```javascript
+url = "";
+fetch(url)
+    .then( response => response.json())
+    .catch(error => console.log('BAD', error));
+```
+
+```javascript
+function makeAjaxRequest(url, method) {
+    if (!method) {
+        method = 'GET';
+    }
+}
+//equals to 
+
+function makeAjaxRequest(url, method = 'GET') {
+    return method;
+}
+```
+```javascript
+makeAjaxRequest('google.com'); // output GET
+makeAjaxRequest('google.com', 'POST'); // POST
+```
+
+**Rule of thumb:**: undefined != null
+
+If we use `makeAjaxRequest('google.com', null); // output GET`, we are actually passing value of `null` to the fuction. As this parameter is not empty, we wont get our default value as output. We eventually will get nothing. However, with ```makeAjaxRequest('google.com', undefined); // output GET```, we will have the GET request.
