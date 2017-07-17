@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Algorithm checklist"
+title: "Algorithm Checklist"
 description: "More to be added"
 date: 2017-07-17
 tags: [algorithms]
