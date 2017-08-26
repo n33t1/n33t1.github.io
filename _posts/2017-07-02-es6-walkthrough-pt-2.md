@@ -3,7 +3,7 @@ layout: post
 title: "ES6 Walkthrough Pt.2"
 description: "Notes for the rally coding ES6 Javascript course"
 date: 2017-07-04
-tags: [javascript]
+tags: [dev, javascript]
 comments: true
 share: true
 ---
