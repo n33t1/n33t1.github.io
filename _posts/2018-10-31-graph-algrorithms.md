@@ -16,46 +16,46 @@ Graph Algorithms<sup>TM</sup>
 4. [Shortest Path](#a4)
 
 ### <a name="a1"></a>Graph Terminology
-  * __Vertices(V)__: Objects in a graph. Also known as node. 
+  * **Vertices(V)**: Objects in a graph. Also known as node. 
 
-  * __Edges(E)__: A set of paris of vertices. In a weighted graph, each edge is assigned a __weight__. A graph is __directed__ if the edges can be traversed in one direction only.
+  * **Edges(E)**: A set of paris of vertices. In a weighted graph, each edge is assigned a **weight**. A graph is **directed** if the edges can be traversed in one direction only.
 
-  * __Graph__: A pair of sets (V, E).
+  * **Graph**: A pair of sets (V, E).
 
-  * __Path__: A walk is a sequence of edges, where each successive pair of edges shares one vertex. A walk if it visits each vertex at most once. The length of a path is the number of edges in it. 
+  * **Path**: A walk is a sequence of edges, where each successive pair of edges shares one vertex. A walk if it visits each vertex at most once. The length of a path is the number of edges in it. 
 
-  *__Simple Graph__: Loops are edges from a vertex to itself. Parallel Edges are multiple edges with the same endpoints. Simple graphs are Graphs without loops and parallel edges. Multigraphs are Non-simple graphs.
+  ***Simple Graph**: Loops are edges from a vertex to itself. Parallel Edges are multiple edges with the same endpoints. Simple graphs are Graphs without loops and parallel edges. Multigraphs are Non-simple graphs.
 
-  * __Neighbor__: If there is an edge connects vertices {u, v}, u and v are neighbors. A graph is __regular__ if the degree of every node is a constant d. A graph is __complete__ if the degree of every node is n−1, i.e., the graph contains all possible edges between the nodes.
+  * **Neighbor**: If there is an edge connects vertices {u, v}, u and v are neighbors. A graph is **regular** if the degree of every node is a constant d. A graph is **complete** if the degree of every node is n−1, i.e., the graph contains all possible edges between the nodes.
 
-  * __Degree__: How many neighbors a node has. 
+  * **Degree**: How many neighbors a node has. 
 
-  * __Cycle__: A path that starts and ends at the same vertex, and has at least one edge.
-  * __Forests__: Graph without cycle for undirected acyclic graph. 
+  * **Cycle**: A path that starts and ends at the same vertex, and has at least one edge.
+  * **Forests**: Graph without cycle for undirected acyclic graph. 
 
-  * __Spanning Tree__: A subgraph of graph G that is a tree and contains every vertex of G. A graph has a spanning tree if and only if it is connected.
+  * **Spanning Tree**: A subgraph of graph G that is a tree and contains every vertex of G. A graph has a spanning tree if and only if it is connected.
 
-  * __Directed Graph__: Assuming we have a directed edge u -> v, then
-    * __Predecessor__: u is a predecessor of v 
-    * __Successor__: v is a successor of u
-    * __In-degree__: The number of predecessor for a node 
-    * __Out-Degree__: The number of successor for a node
-    * __Strongly Connected__: There is a directed path from any vertex to any other
-    * __Acyclic__: The graph does not has any cycle.
+  * **Directed Graph**: Assuming we have a directed edge u -> v, then
+    * **Predecessor**: u is a predecessor of v 
+    * **Successor**: v is a successor of u
+    * **In-degree**: The number of predecessor for a node 
+    * **Out-Degree**: The number of successor for a node
+    * **Strongly Connected**: There is a directed path from any vertex to any other
+    * **Acyclic**: The graph does not has any cycle.
 
-  * __Connectivity__:
-    * __Subgraph__: Given a graph G = (V, E), a subgraph for G is G' = (V', E') where V' <= V and E' <= E. 
+  * **Connectivity**:
+    * **Subgraph**: Given a graph G = (V, E), a subgraph for G is G' = (V', E') where V' <= V and E' <= E. 
     
-    * __Connected Graph__: There is a path between any 2 arbitrary vertices. 
+    * **Connected Graph**: There is a path between any 2 arbitrary vertices. 
 
-    * __Component__: A maximal connected subgraph in a disconnected graph. 
+    * **Component**: A maximal connected subgraph in a disconnected graph. 
 
-    * __Tree__: A connected graph that consists of n nodes and n−1 edges. There is a unique path between any two nodes of a tree.
+    * **Tree**: A connected graph that consists of n nodes and n−1 edges. There is a unique path between any two nodes of a tree.
 
-  * __Coloring__:
-    * In a coloring of a graph, each node is assigned a __color__ so that no adjacent nodes have the same color. 
+  * **Coloring**:
+    * In a coloring of a graph, each node is assigned a **color** so that no adjacent nodes have the same color. 
 
-    * __Bipartite__: A graph is bipartite if it is possible to color it using two colors. It turns out that a graph is bipartite exactly when it does not contain a cycle with an odd number of edges. 
+    * **Bipartite**: A graph is bipartite if it is possible to color it using two colors. It turns out that a graph is bipartite exactly when it does not contain a cycle with an odd number of edges. 
 
 
 ### <a name="a2"></a>Graph Representation
@@ -103,17 +103,17 @@ In Python, we usually use a dict to store a graph, with vertex as key and a list
                 If u is not visited, mark it as visited and push it to Q
     ```
 * Applications (with undirected graphs): 
-  * __Connectivity Check__: 
+  * **Connectivity Check**: 
   
     A graph is connected if there is a path between any two nodes of the graph. Thus, we can check if a graph is connected by starting at an arbitrary node and finding out if we can reach all other nodes.
 
-  * __Finding Cycles__: 
+  * **Finding Cycles**: 
   
     A graph contains a cycle if during a graph traversal, we find a node whose neighbor (other than the previous node in the current path) has already been visited.
     
     Another way to find out whether a graph contains a cycle is to simply calculate the number of nodes and edges in every component. If a component contains c nodes and no cycle, it must contain exactly c −1 edges (so it has to be a tree). If there are c or more edges, the component surely contains a cycle.
 
-  * __Bipartiteness Check__:
+  * **Bipartiteness Check**:
   
     A graph is bipartite if its nodes can be colored using two colors so that there are no adjacent nodes with the same color. 
   
@@ -127,7 +127,7 @@ In Python, we usually use a dict to store a graph, with vertex as key and a list
 | Cycle   | Fail on Negative Cycle        | |
 | Negative Edge  | Can detect Negative Edge        |  Fail on Negative Edge |
 
-* __Bellman–Ford algorithm__
+* **Bellman–Ford algorithm**
   * The time complexity of the algorithm is `O(n*m)`, because the algorithm consists of n−1 rounds and iterates through all m edges during a round. 
 
   * If there are no negative cycles in the graph, all distances are final after n −1 rounds, because each shortest path can contain at most n−1 edges.
@@ -164,7 +164,7 @@ In Python, we usually use a dict to store a graph, with vertex as key and a list
         return distArray
   ```
 
-* __Dijkstra’s algorithm__
+* **Dijkstra’s algorithm**
   * The time complexity of the above implementation is O(n+ mlogm), because the algorithm goes through all nodes of the graph and adds for each edge at most one distance to the priority queue.
 
   * Implementation:
@@ -206,7 +206,7 @@ In Python, we usually use a dict to store a graph, with vertex as key and a list
         return minIdx
   ```
 
-* __Floyd–Warshall algorithm__
+* **Floyd–Warshall algorithm**
   * The time complexity of the algorithm is O(n^3), because it contains three nested loops that go through the nodes of the graph.
   
   * Implementation: 
