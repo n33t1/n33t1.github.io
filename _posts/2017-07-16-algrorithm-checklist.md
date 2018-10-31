@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Graph Algorithms<sup>TM</sup>"
-description: "Graph Algorithms<sup>TM</sup> "
+description: "Graph Algorithms<sup>TM</sup> for undirected (weighted) graphs"
 date: 2018-10-31
 tags: [algorithms]
 comments: true
