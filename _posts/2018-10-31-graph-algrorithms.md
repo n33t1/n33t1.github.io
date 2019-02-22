@@ -18,13 +18,13 @@ Graph Algorithms<sup>TM</sup>
 ### <a name="a1"></a>Graph Terminology
   * Vertices(V): Objects in a graph. Also known as node. 
 
-  * Edges(E): A set of paris of vertices. In a weighted graph, each edge is assigned a weight. A graph is directed if the edges can be traversed in one direction only.
+  * Edges(E): A set of pairs of vertices. In a weighted graph, each edge is assigned a weight. A graph is directed if the edges can be traversed in one direction only.
 
   * Graph: A pair of sets (V, E).
 
   * Path: A walk is a sequence of edges, where each successive pair of edges shares one vertex. A walk if it visits each vertex at most once. The length of a path is the number of edges in it. 
 
-  *Simple Graph: Loops are edges from a vertex to itself. Parallel Edges are multiple edges with the same endpoints. Simple graphs are Graphs without loops and parallel edges. Multigraphs are Non-simple graphs.
+  * Simple Graph: Loops are edges from a vertex to itself. Parallel Edges are multiple edges with the same endpoints. Simple graphs are Graphs without loops and parallel edges. Multi-graphs are Non-simple graphs.
 
   * Neighbor: If there is an edge connects vertices {u, v}, u and v are neighbors. A graph is regular if the degree of every node is a constant d. A graph is complete if the degree of every node is n−1, i.e., the graph contains all possible edges between the nodes.
 
@@ -61,7 +61,7 @@ Graph Algorithms<sup>TM</sup>
 ### <a name="a2"></a>Graph Representation
 A graph can be represented using either an adjacency matrix or an adjacency list. An adjacency matrix is good for checking and updating the connectivity between 2 vertices. An adjacency list is helpful for saving space when the graph is sparse. 
 
-In Python, we usually use a dict to store a graph, with vertex as key and a list of nerighbors as values. If the edges has weight, we can use a tuple of `(neighbor, weight)` to represent it. 
+In Python, we usually use a dict to store a graph, with vertex as key and a list of neighbors as values. If the edges has weight, we can use a tuple of `(neighbor, weight)` to represent it. 
 ### <a name="a3"></a>Graph Traveral and Their Applications
 * Depth-first search (DFS)
   * Visits all the nodes reachable from v in depth-first order. Use recursion or stacks for implementation. 

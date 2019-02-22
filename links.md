@@ -3,18 +3,11 @@ title: Links
 permalink: /links/
 ---
 
-**Tech Blogs:**         
- Research Blogs:[Google Research](https://research.google.com/), [Facebook Research](https://research.fb.com/), [Microsoft Research](https://www.microsoft.com/en-us/research/)             
- ACMers: [tourist](http://codeforces.com/profile/tourist), [岛娘](http://www.shuizilong.com/house/), [sevenkplus](http://sevenkplus.com/), [WJMZBMR](https://sites.google.com/site/wjmzbmr/home)        
- Mathematician:[Matrix67](http://www.matrix67.com/blog/), [What's new](https://terrytao.wordpress.com/)       
- Other:[Aaron Swartz](http://www.aaronsw.com/weblog/), [Useless Duck Company](https://www.youtube.com/user/nicholmikey)     
-           
-            
- **Interesting Stuff:**    
+**Interesting Stuff:**    
  [The Jargon File](http://www.catb.org/jargon/html/) 
             
            
- **Bands/Coding BGM**    
+**Bands/Coding BGM**    
  [Radiohead](http://www.wasteheadquarters.com/) | 
  [Glass Animals](http://www.glassanimals.eu/) | 
  [Mansun](http://rateyourmusic.com/artist/mansun) | 
